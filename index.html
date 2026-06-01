@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Main Boleh, Kecanduan Jangan | Digital Wellness</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#002022",
+                        "tertiary": "#f8f4ff",
+                        "surface-container-low": "#191c1e",
+                        "error": "#ffb4ab",
+                        "on-primary": "#00363a",
+                        "primary-container": "#00f0ff",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#434466",
+                        "secondary-fixed": "#f8d8ff",
+                        "surface-container-high": "#272a2c",
+                        "on-secondary-fixed": "#320047",
+                        "on-tertiary-container": "#5b5c7f",
+                        "on-background": "#e0e3e5",
+                        "on-error-container": "#ffdad6",
+                        "background": "#101415",
+                        "secondary-fixed-dim": "#ecb2ff",
+                        "inverse-on-surface": "#2d3133",
+                        "inverse-surface": "#e0e3e5",
+                        "surface-tint": "#00dbe9",
+                        "surface-container": "#1d2022",
+                        "tertiary-fixed-dim": "#c3c3ec",
+                        "on-surface-variant": "#b9cacb",
+                        "inverse-primary": "#006970",
+                        "surface-variant": "#323537",
+                        "surface": "#101415",
+                        "on-secondary-container": "#480063",
+                        "outline-variant": "#3b494b",
+                        "primary-fixed-dim": "#00dbe9",
+                        "on-primary-container": "#006970",
+                        "surface-container-lowest": "#0b0f10",
+                        "on-tertiary": "#2c2d4e",
+                        "surface-bright": "#363a3b",
+                        "on-error": "#690005",
+                        "outline": "#849495",
+                        "surface-container-highest": "#323537",
+                        "tertiary-container": "#d7d6ff",
+                        "secondary-container": "#cf5cff",
+                        "on-primary-fixed-variant": "#004f54",
+                        "surface-dim": "#101415",
+                        "on-surface": "#e0e3e5",
+                        "on-secondary-fixed-variant": "#74009f",
+                        "secondary": "#ecb2ff",
+                        "on-tertiary-fixed": "#171838",
+                        "on-secondary": "#520071",
+                        "primary": "#dbfcff",
+                        "primary-fixed": "#7df4ff",
+                        "tertiary-fixed": "#e1e0ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "stack-lg": "48px",
+                        "container-max": "1200px",
+                        "gutter": "24px",
+                        "stack-sm": "12px",
+                        "margin-mobile": "20px",
+                        "base": "8px",
+                        "stack-md": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"],
+                        "button": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "label-md": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["56px", {
+                            "lineHeight": "64px",
+                            "letterSpacing": "-0.02em",
+                            "fontWeight": "800"
+                        }],
+                        "display-lg-mobile": ["36px", {
+                            "lineHeight": "44px",
+                            "letterSpacing": "-0.02em",
+                            "fontWeight": "800"
+                        }],
+                        "headline-lg": ["32px", {
+                            "lineHeight": "40px",
+                            "fontWeight": "700"
+                        }],
+                        "headline-md": ["24px", {
+                            "lineHeight": "32px",
+                            "fontWeight": "600"
+                        }],
+                        "body-lg": ["18px", {
+                            "lineHeight": "28px",
+                            "fontWeight": "400"
+                        }],
+                        "button": ["16px", {
+                            "lineHeight": "20px",
+                            "fontWeight": "600"
+                        }],
+                        "body-md": ["16px", {
+                            "lineHeight": "24px",
+                            "fontWeight": "400"
+                        }],
+                        "label-md": ["14px", {
+                            "lineHeight": "20px",
+                            "letterSpacing": "0.05em",
+                            "fontWeight": "500"
+                        }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary-container grid-dots">
+    <!-- Top Navigation Bar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface/60 backdrop-blur-xl border-b border-white/10 shadow-[0_0_20px_rgba(0,219,233,0.1)]">
+        <div
+            class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-sm max-w-container-max mx-auto">
+            <div class="flex items-center gap-base">
+                <span class="material-symbols-outlined text-primary-container"
+                    style="font-variation-settings: 'FILL' 1;">sports_esports</span>
+                <span
+                    class="font-display-lg-mobile text-display-lg-mobile tracking-tighter text-primary dark:text-primary-fixed-dim">MAIN
+                    BOLEH</span>
+            </div>
+            <div class="hidden md:flex items-center gap-stack-md">
+                <a class="text-on-surface-variant font-button hover:text-primary-fixed transition-colors duration-300"
+                    href="#about">About</a>
+                <a class="text-on-surface-variant font-button hover:text-primary-fixed transition-colors duration-300"
+                    href="#signs">Signs</a>
+                <a class="text-on-surface-variant font-button hover:text-primary-fixed transition-colors duration-300"
+                    href="#habits">Habits</a>
+                <button
+                    class="bg-primary-container text-on-primary-container px-stack-md py-stack-sm rounded-xl font-button active:scale-95 transition-transform">Mulai
+                    Quiz</button>
+            </div>
+            <button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
+        </div>
+    </nav>
+    <main class="pt-24 overflow-x-hidden">
+        <!-- Hero Section -->
+        <section
+            class="px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center min-h-[707px]">
+            <div class="space-y-stack-md">
+                <div class="inline-block px-stack-sm py-1 rounded-full border border-primary/20 bg-primary/5">
+                    <span class="font-label-md text-label-md text-primary-fixed-dim uppercase">Digital Wellness
+                        Campaign</span>
+                </div>
+                <h1
+                    class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg leading-tight">
+                    Main Boleh, <br /><span class="gradient-text">Kecanduan Jangan</span>
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    Bijak Bermain Game Online untuk Hidup yang Lebih Seimbang. Temukan kembali harmoni antara dunia
+                    digital dan realita.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-stack-sm pt-stack-sm">
+                    <button
+                        class="gradient-button text-on-primary-fixed px-stack-lg py-4 rounded-xl font-button shadow-lg shadow-primary/20 active:scale-95 transition-all">Pelajari
+                        Lebih Lanjut</button>
+                    <button
+                        class="glass-card text-on-surface px-stack-lg py-4 rounded-xl font-button active:scale-95 transition-all">Cek
+                        Keseimbanganmu</button>
+                </div>
+            </div>
+            <div class="relative group">
+                <div
+                    class="absolute -inset-4 bg-primary/10 blur-3xl rounded-full opacity-50 group-hover:opacity-75 transition-opacity">
+                </div>
+                <div
+                    class="relative glass-card rounded-3xl overflow-hidden aspect-square flex items-center justify-center p-stack-lg">
+                    <img alt="Gamer in balanced environment"
+                        class="w-full h-full object-cover rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-700"
+                        data-alt="A cinematic, high-end digital illustration of a young adult sitting at a modern gaming setup that is integrated into a lush indoor garden. Sunlight streams through a large window, illuminating both the high-tech glowing PC peripherals and organic green plants like monstera and ferns. The color palette features deep navy backgrounds with vibrant cyan and violet neon accents, creating a futuristic yet serene atmosphere of digital wellness."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA54jrismCr9af5HCOem22V-1Iz8EC7-9WOlsfo4KxveU1aDNqPvhd52kBQLv2FCCR0I5jCG4G4Dm-tT5FyT8bo0G1glFZWTfwsTFgQ6UB9GuXp7hkODVHl9iyM-DDyeRL2pmdnJHKX-G6bqwoXlXctuQVJesll3mgP23MfF8j2vb2gObm1Uw-FX64Y9HyD0522kZW1g3LF9DbYHGDYw_SSJG5LIMCzNKknZBVhdSUZoZk5h0pUUnLvO9x9UJRYPmsTidrGwZfOSs4" />
+                </div>
+            </div>
+        </section>
+        <!-- About Section: Stats Bento -->
+        <section class="px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto" id="about">
+            <div class="text-center mb-stack-lg">
+                <h2 class="font-headline-lg text-headline-lg mb-stack-sm">Mengapa Ini Penting?</h2>
+                <div class="h-1 w-20 bg-primary-container mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div class="md:col-span-2 glass-card p-stack-md rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <span class="font-label-md text-label-md text-primary mb-stack-sm block">GLOBAL INSIGHT</span>
+                        <h3 class="font-headline-md text-headline-md mb-stack-sm">Pertumbuhan Fenomena Gaming</h3>
+                        <p class="text-on-surface-variant font-body-md">Lebih dari 3 miliar orang bermain game di
+                            seluruh dunia. Meskipun memberikan hiburan dan koneksi, risiko adiksi meningkat seiring
+                            dengan desain game yang semakin imersif.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-stack-md mt-stack-lg">
+                        <div class="p-stack-sm border-l-2 border-primary/30">
+                            <div class="font-display-lg-mobile text-primary">85%</div>
+                            <div class="font-label-md text-on-surface-variant">Remaja Aktif Bermain</div>
+                        </div>
+                        <div class="p-stack-sm border-l-2 border-secondary/30">
+                            <div class="font-display-lg-mobile text-secondary">3.4H</div>
+                            <div class="font-label-md text-on-surface-variant">Rata-rata Waktu/Hari</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="glass-card p-stack-md rounded-2xl bg-gradient-to-br from-surface-container-high to-background flex flex-col items-center justify-center text-center">
+                    <span
+                        class="material-symbols-outlined text-primary-container text-6xl mb-stack-sm">health_and_safety</span>
+                    <h3 class="font-headline-md text-headline-md mb-stack-sm">Gaming Disorder</h3>
+                    <p class="text-on-surface-variant text-sm">Resmi diklasifikasikan oleh WHO sebagai pola perilaku
+                        yang ditandai dengan gangguan kontrol atas permainan.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Signs of Addiction Section -->
+        <section
+            class="px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto bg-surface-container-lowest/50 rounded-3xl my-stack-lg"
+            id="signs">
+            <div class="mb-stack-lg flex flex-col md:flex-row md:items-end justify-between gap-stack-md">
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg mb-2">Kenali Gejalanya</h2>
+                    <p class="text-on-surface-variant">Apakah hobi Anda mulai mengendalikan hidup Anda?</p>
+                </div>
+                <div class="font-label-md text-primary tracking-widest uppercase">Warning Signals</div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                <!-- Card 1 -->
+                <div class="glass-card glass-card-hover p-stack-md rounded-2xl transition-all group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-stack-md group-hover:bg-primary/20 transition-colors">
+                        <span class="material-symbols-outlined text-primary">work_off</span>
+                    </div>
+                    <h4 class="font-headline-md text-headline-md text-lg mb-stack-sm">Neglecting Duties</h4>
+                    <p class="text-on-surface-variant text-sm">Mengabaikan tugas sekolah, pekerjaan, atau tanggung jawab
+                        rumah tangga demi bermain.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass-card glass-card-hover p-stack-md rounded-2xl transition-all group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-stack-md group-hover:bg-secondary/20 transition-colors">
+                        <span class="material-symbols-outlined text-secondary">bedtime</span>
+                    </div>
+                    <h4 class="font-headline-md text-headline-md text-lg mb-stack-sm">Sleep Disruption</h4>
+                    <p class="text-on-surface-variant text-sm">Begadang hingga larut malam dan merasa sangat lelah di
+                        siang hari karena game.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass-card glass-card-hover p-stack-md rounded-2xl transition-all group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-error/10 flex items-center justify-center mb-stack-md group-hover:bg-error/20 transition-colors">
+                        <span class="material-symbols-outlined text-error">groups</span>
+                    </div>
+                    <h4 class="font-headline-md text-headline-md text-lg mb-stack-sm">Social Isolation</h4>
+                    <p class="text-on-surface-variant text-sm">Menarik diri dari pergaulan nyata dan lebih memilih
+                        interaksi di dunia virtual.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="glass-card glass-card-hover p-stack-md rounded-2xl transition-all group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-stack-md group-hover:bg-primary/20 transition-colors">
+                        <span class="material-symbols-outlined text-primary-fixed">mood_bad</span>
+                    </div>
+                    <h4 class="font-headline-md text-headline-md text-lg mb-stack-sm">Mood Swings</h4>
+                    <p class="text-on-surface-variant text-sm">Merasa cemas, marah, atau gelisah saat tidak bisa
+                        mengakses game kesayangan.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Healthy Habits & Tips -->
+        <section
+            class="px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-start"
+            id="habits">
+            <div class="space-y-stack-md">
+                <h2 class="font-headline-lg text-headline-lg">Kebiasaan Bermain yang Sehat</h2>
+                <div class="space-y-4">
+                    <div
+                        class="flex items-start gap-stack-md p-stack-md border border-outline-variant/20 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors">
+                        <span class="material-symbols-outlined text-primary-container mt-1">check_circle</span>
+                        <div>
+                            <h4 class="font-button text-button">Atur Batas Waktu</h4>
+                            <p class="text-on-surface-variant text-sm">Gunakan timer untuk membatasi sesi bermain
+                                maksimal 2 jam per hari.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-start gap-stack-md p-stack-md border border-outline-variant/20 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors">
+                        <span class="material-symbols-outlined text-primary-container mt-1">check_circle</span>
+                        <div>
+                            <h4 class="font-button text-button">Prioritaskan Tidur</h4>
+                            <p class="text-on-surface-variant text-sm">Matikan semua layar 1 jam sebelum tidur untuk
+                                kualitas istirahat yang lebih baik.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-start gap-stack-md p-stack-md border border-outline-variant/20 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors">
+                        <span class="material-symbols-outlined text-primary-container mt-1">check_circle</span>
+                        <div>
+                            <h4 class="font-button text-button">Gerak Aktif</h4>
+                            <p class="text-on-surface-variant text-sm">Lakukan peregangan selama 5 menit setiap 30
+                                menit bermain game.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="glass-card p-stack-lg rounded-3xl glow-cyan relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-stack-md opacity-20">
+                    <span class="material-symbols-outlined text-9xl">tips_and_updates</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md mb-stack-md">Digital Wellness Tip</h3>
+                <div class="min-h-[120px] flex items-center" id="tip-container">
+                    <p class="font-body-lg text-body-lg italic text-primary-fixed" id="active-tip">"Gunakan filter
+                        Blue Light pada layar Anda untuk mengurangi ketegangan mata saat bermain di malam hari."</p>
+                </div>
+                <div class="flex gap-stack-sm mt-stack-md">
+                    <button class="p-base rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-all"
+                        onclick="nextTip()">
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                    <span class="font-label-md text-on-surface-variant self-center">Klik untuk tips lainnya</span>
+                </div>
+            </div>
+        </section>
+        <!-- Self-Assessment Mini-Quiz -->
+        <section class="px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+            <div class="glass-card rounded-[2rem] p-stack-lg md:p-16 text-center relative">
+                <div class="max-w-2xl mx-auto space-y-stack-md">
+                    <h2 class="font-headline-lg text-headline-lg">Apakah Kamu Sudah Bermain dengan Sehat?</h2>
+                    <p class="text-on-surface-variant">Ikuti asesmen singkat ini untuk mengetahui status keseimbangan
+                        digitalmu.</p>
+                    <div class="pt-stack-md" id="quiz-content">
+                        <div class="space-y-stack-md" id="question-area">
+                            <p class="font-headline-md text-headline-md text-lg" id="quiz-question">Seberapa sering
+                                kamu melewatkan jam makan demi menyelesaikan sebuah level?</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-sm">
+                                <button
+                                    class="w-full p-stack-md rounded-xl border border-outline/30 hover:bg-primary/10 hover:border-primary transition-all text-left"
+                                    onclick="answer(1)">Jarang / Tidak Pernah</button>
+                                <button
+                                    class="w-full p-stack-md rounded-xl border border-outline/30 hover:bg-primary/10 hover:border-primary transition-all text-left"
+                                    onclick="answer(2)">Kadang-kadang</button>
+                                <button
+                                    class="w-full p-stack-md rounded-xl border border-outline/30 hover:bg-secondary/10 hover:border-secondary transition-all text-left"
+                                    onclick="answer(3)">Sering</button>
+                                <button
+                                    class="w-full p-stack-md rounded-xl border border-outline/30 hover:bg-error/10 hover:border-error transition-all text-left"
+                                    onclick="answer(4)">Hampir Setiap Hari</button>
+                            </div>
+                        </div>
+                        <!-- Result Area (Hidden by default) -->
+                        <div class="hidden space-y-stack-md animate-pulse" id="result-area">
+                            <div
+                                class="w-32 h-32 rounded-full border-4 border-primary-container flex items-center justify-center mx-auto mb-stack-md">
+                                <span class="font-display-lg-mobile text-primary-container" id="score-val">85</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md">Level Keseimbangan: <span
+                                    class="text-primary-fixed">OPTIMAL</span></h3>
+                            <p class="text-on-surface-variant">Terus pertahankan kebiasaan baikmu. Kamu adalah master
+                                dalam mengelola waktu antara dunia virtual dan nyata!</p>
+                            <button class="text-primary font-button underline" onclick="resetQuiz()">Ulangi
+                                Tes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Awareness Quotes -->
+        <section class="py-24 bg-gradient-to-b from-transparent via-primary/5 to-transparent">
+            <div class="px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto text-center italic">
+                <span
+                    class="material-symbols-outlined text-6xl text-primary-container/30 mb-stack-sm">format_quote</span>
+                <p class="font-display-lg-mobile text-display-lg-mobile text-on-surface leading-tight">
+                    "Game adalah tempat yang hebat untuk berkunjung, tapi jangan pernah menjadikannya tempat tinggal
+                    permanenmu."
+                </p>
+                <div class="mt-stack-md font-label-md text-secondary tracking-widest">— EQUILIBRIUM DIGITAL</div>
+            </div>
+        </section>
+        <!-- Final CTA Section -->
+        <section class="px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto mb-24">
+            <div class="relative rounded-3xl overflow-hidden bg-surface-container-high p-stack-lg md:p-24 text-center">
+                <div class="absolute inset-0 opacity-20 pointer-events-none">
+                    <img alt="Retro hardware as background" class="w-full h-full object-cover"
+                        data-alt="A highly detailed close-up of vintage and futuristic gaming hardware components, like circuit boards and glowing tubes, arranged in an artistic, clean layout. The aesthetic is tech-focused with a moody dark navy background, highlighted by sharp cyan and magenta light leaks. The composition feels high-end and cinematic, representing the complexity of technology in a structured, orderly way."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAX0ZlFmHTlolZsDRb0XbfDWhbYY_6oPK5HPXY61jwfYV2RwDjbxzxe7LbbPwAP8MhXg3o2-7CKI47zt6vRoAtEB2_gF26e0HElPRmb7y7BdTdVl3t0BXIAS0IqGnXDk4aca2YGouqH7qx5lyzUUdUmY-rTMStX4ch7ytZ6M3FQgqUbNpF5eveJr8jmVnzzbagF9vPK3PxTUuS49egiOAMTWGbV-BoxQX0WhiL9eM7_9x6qTZ6-lCIpestfnm0vCjhaFYt0CWc9Ro" />
+                </div>
+                <div class="relative z-10 space-y-stack-md">
+                    <h2 class="font-display-lg-mobile text-display-lg-mobile md:text-display-lg">Break the Loop</h2>
+                    <p class="font-headline-md text-headline-md text-primary-fixed">Kendalikan Game, Jangan
+                        Dikendalikan</p>
+                    <div class="pt-stack-md">
+                        <button
+                            class="gradient-button text-on-primary-fixed px-stack-lg py-5 rounded-xl font-button text-lg active:scale-95 transition-all shadow-xl shadow-primary/20">
+                            Mulai Hidup Seimbang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full rounded-t-xl border-t border-outline-variant/20">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+            <div class="space-y-stack-sm">
+                <div class="font-headline-md text-headline-md text-primary">MAIN BOLEH</div>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    Membangun ekosistem digital yang lebih sehat untuk masa depan generasi pemain game Indonesia.
+                </p>
+                <div class="flex gap-stack-sm pt-4">
+                    <a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary/10 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">share</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary/10 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">mail</span>
+                    </a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-stack-md">
+                <div class="space-y-stack-sm">
+                    <div class="font-label-md text-label-md text-tertiary">NAVIGASI</div>
+                    <ul class="space-y-2">
+                        <li><a class="text-on-surface-variant text-sm hover:text-secondary-fixed transition-all"
+                                href="#">Tentang Kami</a></li>
+                        <li><a class="text-on-surface-variant text-sm hover:text-secondary-fixed transition-all"
+                                href="#">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-stack-sm">
+                    <div class="font-label-md text-label-md text-tertiary">DUKUNGAN</div>
+                    <ul class="space-y-2">
+                        <li><a class="text-on-surface-variant text-sm hover:text-secondary-fixed transition-all"
+                                href="#">Kontak Bantuan</a></li>
+                        <li><a class="text-on-surface-variant text-sm hover:text-secondary-fixed transition-all"
+                                href="#">Sumber Data</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="px-margin-mobile md:px-margin-desktop py-stack-sm border-t border-outline-variant/10 text-center">
+            <p class="font-label-md text-label-md text-on-surface-variant opacity-80">© 2024 Kecanduan Jangan. Level up
+                your life.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
