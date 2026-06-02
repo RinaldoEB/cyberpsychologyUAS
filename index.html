@@ -162,8 +162,6 @@
                 <a class="text-on-surface-variant font-button hover:text-primary-fixed transition-colors duration-300"
                     href="#about">About</a>
                 <a class="text-on-surface-variant font-button hover:text-primary-fixed transition-colors duration-300"
-                    href="#signs">Signs</a>
-                <a class="text-on-surface-variant font-button hover:text-primary-fixed transition-colors duration-300"
                     href="#habits">Habits</a>
                 <button
                     class="bg-primary-container text-on-primary-container px-stack-md py-stack-sm rounded-xl font-button active:scale-95 transition-transform">Mulai
@@ -175,7 +173,7 @@
             <a class="block text-on-surface-variant font-button hover:text-primary-fixed transition-colors duration-300" href="#about">About</a>
             <a class="block text-on-surface-variant font-button hover:text-primary-fixed transition-colors duration-300" href="#signs">Signs</a>
             <a class="block text-on-surface-variant font-button hover:text-primary-fixed transition-colors duration-300" href="#habits">Habits</a>
-            <button class="w-full bg-primary-container text-on-primary-container px-stack-md py-stack-sm rounded-xl font-button active:scale-95 transition-transform">Mulai Quiz</button>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3Lmlk07e-iFWxfwZjqKJz4QXNA3YOsSXSp91cVcT0DWwjYQ/viewform?usp=dialog" class="w-full bg-primary-container text-on-primary-container px-stack-md py-stack-sm rounded-xl font-button active:scale-95 transition-transform" target="_blank">Mulai Quiz</a>
         </div>
     </nav>
     <main class="pt-24 overflow-x-hidden">
@@ -196,10 +194,8 @@
                     digital dan realita.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-stack-sm pt-stack-sm">
-                    <button class="gradient-button text-on-primary-fixed px-stack-lg py-4 rounded-xl font-button shadow-lg shadow-primary/20 active:scale-95 transition-all">
-                        Pelajari Lebih Lanjut</button>
-                    <button class="glass-card text-on-surface px-stack-lg py-4 rounded-xl font-button active:scale-95 transition-all" href="#quiz">
-                        Cek Keseimbanganmu</button>
+                    <a class="glass-card text-on-surface px-stack-lg py-4 rounded-xl font-button active:scale-95 transition-all" href="https://docs.google.com/forms/d/e/1FAIpQLSf3Lmlk07e-iFWxfwZjqKJz4QXNA3YOsSXSp91cVcT0DWwjYQ/viewform?usp=dialog" target="_blank">
+                        Cek Keseimbanganmu</a>
                 </div>
             </div>
             <div class="relative group">
@@ -208,17 +204,19 @@
                 </div>
                 <div
                     class="relative glass-card rounded-3xl overflow-hidden aspect-square flex items-center justify-center p-stack-lg">
-                    <img alt="Gamer in balanced environment"
-                        class="w-full h-full object-cover rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-700"
+                    <video alt="Gamer in balanced environment"
+                        class="w-full h-full object-cover rounded-2xl transition-all duration-700"
                         data-alt="A cinematic, high-end digital illustration of a young adult sitting at a modern gaming setup that is integrated into a lush indoor garden. Sunlight streams through a large window, illuminating both the high-tech glowing PC peripherals and organic green plants like monstera and ferns. The color palette features deep navy backgrounds with vibrant cyan and violet neon accents, creating a futuristic yet serene atmosphere of digital wellness."
-                        src="asset/wibu.jpeg" />
+                        autoplay muted loop>
+                        <source src="asset/jumbotrongif.mp4" type="video/mp4" />
+                    </video>
                 </div>
             </div>
         </section>
         <!-- About Section: Stats Bento -->
         <section class="px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto" id="about">
             <div class="text-center mb-stack-lg">
-                <h2 class="font-headline-lg text-headline-lg mb-stack-sm">APA ITU ADIKSI GAME?</h2>
+                <h2 id="about" class="font-headline-lg text-headline-lg mb-stack-sm">APA ITU ADIKSI GAME?</h2>
                 <div class="h-1 w-20 bg-primary-container mx-auto rounded-full"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
@@ -259,7 +257,7 @@
             id="signs">
             <div class="mb-stack-lg flex flex-col md:flex-row md:items-end justify-between gap-stack-md">
                 <div>
-                    <h2 class="font-headline-lg text-headline-lg mb-2">Gejala awal adiksi</h2>
+                    <h2 id="habits" class="font-headline-lg text-headline-lg mb-2">Gejala awal adiksi</h2>
                     <p class="text-on-surface-variant">Apakah masih sebuah hobi atau sudah mengambil hidup anda ?</p>
                 </div>
                 <div class="font-label-md text-primary tracking-widest uppercase">Tanda - tanda berbahaya</div>
