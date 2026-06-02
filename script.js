@@ -17,16 +17,40 @@ tipEl.style.opacity = 1;
 }, 300);
 }
 
+const quizResults = {
+    1: {
+        title: 'Kamu Mengontrol Waktu dengan Baik Teruskan Ya !!',
+        description: 'Jarang melewatkan makan demi bermain game berarti kamu sudah menjaga keseimbangan antara hiburan dan kebutuhan tubuhmu.'
+    },
+    2: {
+        title: 'Perlu Lebih Waspada Jangan Sampai Kecanduan',
+        description: 'Kadang-kadang melewatkan waktu makan bisa menjadi tanda bahwa kamu harus lebih memperhatikan batasan dan istirahat saat bermain.'
+    },
+    3: {
+        title: 'Awas, Mulai Terjadi Pola Berisiko Tuh, Nanti Kecanduan',
+        description: 'Sering memprioritaskan game dibanding kebutuhan dasar menunjukkan kamu perlu mengatur ulang rutinitas untuk kesehatan fisik dan mental.'
+    },
+    4: {
+        title: 'Kurangin Ya ! Itu Bahaya',
+        description: 'Hampir setiap hari melewatkan makan demi bermain game adalah tanda kuat untuk segera mencari dukungan dan membuat jadwal bermain yang sehat.'
+    }
+};
+
 function answer(val) {
-const questionArea = document.getElementById('question-area');
-const resultArea = document.getElementById('result-area');
+    const questionArea = document.getElementById('question-area');
+    const resultArea = document.getElementById('result-area');
+    const resultTitle = document.getElementById('result-title');
+    const resultDescription = document.getElementById('result-description');
 
-questionArea.classList.add('hidden');
-resultArea.classList.remove('hidden');
+    questionArea.classList.add('hidden');
+    resultArea.classList.remove('hidden');
 
-// Artificial score calculation based on the buttons (1 is best, 4 is worst)
-const score = 100 - (val * 20);
-document.getElementById('score-val').innerText = score;
+    const result = quizResults[val] || {
+        title: 'Hasil Asesmen',
+        description: 'Pilihan tidak dikenali. Silakan coba lagi.'
+    };
+    resultTitle.innerText = result.title;
+    resultDescription.innerText = result.description;
 }
 
 function resetQuiz() {
